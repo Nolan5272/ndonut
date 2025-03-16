@@ -1,5 +1,7 @@
 #include <math.h>
 #include <stdio.h>
+#include <time.h>
+
 
 int main(){
 
@@ -12,8 +14,12 @@ int main(){
 
     float theta;
     float phi;
-    while(x = 0){
 
-    }
+    clock_t start = clock(), diff;
+    //ProcessIntenseFunction();
+    diff = clock() - start;
+
+    int msec = diff * 1000 / CLOCKS_PER_SEC;
+    printf("Time taken %d seconds %d milliseconds", msec/1000, msec%1000);
 
 }
